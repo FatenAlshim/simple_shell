@@ -44,3 +44,9 @@ _eputs(info->argv[0]);
 _eputs(": ");
 _eputs(estr);
 }
+/**
+ * remove_comments - Method changes first instance of '#' with '\0'
+ * @buf: address of the string to edited
+ *
+ * Return: Always 0;
+ */
