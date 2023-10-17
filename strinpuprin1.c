@@ -27,3 +27,10 @@ return (-1);
 }
 return (result);
 }
+/**
+ * print_error - show an error output
+ * @info: the parameter && return information struct
+ * @estr: string contain specific error type
+ * Return: 0 if no int in string, changed int otherwise
+ * -1 on error
+ */
