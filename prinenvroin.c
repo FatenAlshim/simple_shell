@@ -27,3 +27,10 @@ add_node_end(&node, environ[i], 0);
 info->env = node;
 return (0);
 }
+/**
+ * _getenv - gets the value of an environ variable
+ * @info: Structure containing potential arguments. Used to maintain
+ * @name: env var name
+ *
+ * Return: the value
+ */
