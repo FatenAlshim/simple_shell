@@ -48,3 +48,10 @@ node = node->next;
 }
 return (NULL);
 }
+/**
+ * _mysetenv - Initialize a new enviro datatype,
+ * or update an existing one
+ * @info: Struct contain estimated arguments. Used to maintain
+ * constant function prototype.
+ *  Return: Always 0
+ */
