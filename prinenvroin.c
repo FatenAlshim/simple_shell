@@ -66,3 +66,9 @@ if (_setenv(info, info->argv[1], info->argv[2]))
 return (0);
 return (1);
 }
+/**
+ * _myunsetenv - Delete an enviro datatype.
+ * @info: Struct contain estimated arguments. Used to maintain
+ *        const function prototype.
+ * Return: Always 0
+ */
