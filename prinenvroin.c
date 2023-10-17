@@ -34,3 +34,17 @@ return (0);
  *
  * Return: the value
  */
+char *_getenv(info_t *info, const char *name)
+{
+list_t *node = info->env;
+char *p;
+
+while (node)
+{
+p = starts_with(node->str, name);
+if (p && *p)
+return (p);
+node = node->next;
+}
+return (NULL);
+}
