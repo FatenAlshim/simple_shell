@@ -11,3 +11,9 @@ int _myenv(info_t *info)
 print_list_str(info->env);
 return (0);
 }
+/**
+ * populate_env_list - initial env link list
+ * @info: Struct contain estimated arguments. Used to maintain
+ * constant function prototype.
+ * Return: Always 0
+ */
