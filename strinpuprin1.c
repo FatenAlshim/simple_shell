@@ -99,3 +99,11 @@ count++;
 
 return (count);
 }
+/**
+ * convert_number - change method, a copy of simple_ataio
+ * @num: number.
+ * @base: base.
+ * @flags: argument flags
+ *
+ * Return: string
+ */
