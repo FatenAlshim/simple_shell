@@ -61,3 +61,11 @@ buf[i] = '\0';
 break;
 }
 }
+/**
+ * print_d - function prints a decimal (integer) number (base 10)
+ * @input: the input
+ * @fd: the filedescriptor to write to
+ *
+ * Return: number of characters printed
+ */
+
