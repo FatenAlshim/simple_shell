@@ -11,3 +11,8 @@ info->argv = NULL;
 info->path = NULL;
 info->argc = 0;
 }
+/**
+ * free_info - realese info_t struct body
+ * @info: structure address
+ * @all: true if realesing all fields
+ */
