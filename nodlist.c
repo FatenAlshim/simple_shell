@@ -32,3 +32,9 @@ new_head->next = *head;
 *head = new_head;
 return (new_head);
 }
+/**
+ * free_list - Realese all nodes of the list
+ * @head_ptr: address of pointer to node head
+ *
+ * Return: void
+ */
