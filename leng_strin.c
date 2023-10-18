@@ -63,3 +63,10 @@ return (*s1 < *s2 ? -1 : 1);
  *
  * Return: address of next char of haystack or NULL
  */
+char *starts_with(const char *haystack, const char *needle)
+{
+while (*needle)
+if (*needle++ != *haystack++)
+return (NULL);
+return ((char *)haystack);
+}
