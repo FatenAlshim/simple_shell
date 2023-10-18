@@ -118,3 +118,11 @@ if (r >= 0)
 *i = r;
 return (r);
 }
+/**
+ * _getline - get the liner after of input from STDIN
+ * @info: parameter struct
+ * @ptr: address of pointer to buffer, preallocated or NULL
+ * @length: size of preallocated ptr buffer if not NULL
+ *
+ * Return: s
+ */
