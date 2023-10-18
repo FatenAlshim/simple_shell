@@ -15,3 +15,11 @@ for (i = 0; i < n; i++)
 s[i] = b;
 return (s);
 }
+/**
+ * _realloc - reallocates the block of memory
+ * @ptr: pointer to previous malloc'ated block
+ * @old_size: byte size of previous block
+ * @new_size: byte size of new block
+ *
+ * Return: pointer to th ol'block nam.
+ */
