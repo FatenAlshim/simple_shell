@@ -17,3 +17,10 @@ while (*s++)
 i++;
 return (i);
 }
+/**
+ * _strcat - sequence two strings
+ * @dest: the destination buffer
+ * @src: the source buffer
+ *
+ * Return: pointer to destination buffer
+ */
