@@ -55,3 +55,9 @@ _puts("\n");
 _puts("$ ");
 _putchar(BUF_FLUSH);
 }
+/**
+ * get_input - gets a line minus the newline
+ * @info: parameter struct
+ *
+ * Return: bytes read
+ */
