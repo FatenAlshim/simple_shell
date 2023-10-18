@@ -35,3 +35,10 @@ while (*src)
 *dest = *src;
 return (ret);
 }
+/**
+ * _strcmp - performs lexic comparison of two strangs.
+ * @s1: the first streng
+ * @s2: the second streng
+ *
+ * Return: negative if s1 < s2, positive if s1 > s2, zero if s1 == s2
+ */
