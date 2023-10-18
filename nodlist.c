@@ -114,3 +114,10 @@ i++;
 }
 return (i);
 }
+/**
+ * delete_node_at_index - remove node at knowen index
+ * @head: address of pointer to 1st node
+ * @index: index of node to remove
+ *
+ * Return: 1 on success, 0 on failure
+ */
