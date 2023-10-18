@@ -55,3 +55,11 @@ node = next_node;
 }
 *head_ptr = NULL;
 }
+/**
+ * add_node_end - adds a node to the end of the list
+ * @head: address of pointer to head node
+ * @str: str field of node
+ * @num: node index used by history
+ *
+ * Return: size of list
+ */
