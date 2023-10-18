@@ -44,3 +44,7 @@ p[old_size] = ((char *)ptr)[old_size];
 free(ptr);
 return (p);
 }
+/**
+ * ffree - frees a string of strings
+ * @pp: string of strings
+ */
