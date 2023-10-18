@@ -39,3 +39,8 @@ close(info->readfd);
 _putchar(BUF_FLUSH);
 }
 }
+/**
+ * set_info - initializes info_t struct
+ * @info: struct address
+ * @av: argument vector
+ */
