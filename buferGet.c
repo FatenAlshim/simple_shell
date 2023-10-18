@@ -43,3 +43,9 @@ info->cmd_buf = buf;
 }
 return (r);
 }
+/**
+ * sigintHandler - delete ctrl-C
+ * @sig_num: the signal numb
+ *
+ * Return: void
+ */
