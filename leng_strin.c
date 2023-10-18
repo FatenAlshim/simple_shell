@@ -56,3 +56,10 @@ return (0);
 else
 return (*s1 < *s2 ? -1 : 1);
 }
+/**
+ * starts_with - checks if needle starts with haystack
+ * @haystack: string to search
+ * @needle: the substring to find
+ *
+ * Return: address of next char of haystack or NULL
+ */
