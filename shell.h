@@ -117,6 +117,10 @@ void fork_cmd(info_t *);
 int find_builtin(info_t *);
 void find_cmd(info_t *);
 
+/* loophsh.c */
+int loophsh(char **);
+
+
 /* toem_simple_ataio.c*/
 int _atoi(char *);
 int is_delim(char, char *);
@@ -223,10 +227,6 @@ void _puts(char *);
 /* toem_worztok.c */
 char **strtow2(char *, char);
 char **strtow(char *, char *);
-
-/* loophsh.c */
-int loophsh(char **);
-
 
 /* toem_ch_vars.c */
 void check_chain(info_t *, char *, size_t *, size_t, size_t);
