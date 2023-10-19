@@ -75,7 +75,7 @@ int i, count = 0;
 unsigned int _abs_, current;
 
 if (fd == STDERR_FILENO)
-__putchar = _putchar;
+__putchar = _eputchar;
 if (input < 0)
 {
 _abs_ = -input;
