@@ -137,9 +137,8 @@ char *_strncpy(char *, char *, int);
 
 /* toem_exibutlin1.c */
 int _myhistory(info_t *);
-int print_alias(info_t *);
 int _myalias(info_t *);
-int unset_alias(info_t *);
+int print_alias(info_t *);
 
 /* toem_simple_ataio.c */
 int _atoi(char *);
