@@ -12,41 +12,6 @@ int _myhistory(info_t *info)
 	print_list(info->history);
 	return (0);
 }
-
-
-/**
- * _myalias - mimicss the alias builtin
- * @info: Structure containing potentiall arguments. Used to maintain
- *          constant function prototypee.
- *  Return: Always 0
- */
-int _myalias(info_t *info)
-{
-	int i = 0;
-	char *p = NULL;
-	list_t *node = NULL;
-
-	if (info->argc == 1)
-	{
-		node = info->alias;
-		while (node)
-		{
-			print_alias(node);
-			node = node->next;
-		}
-		return (0);
-	}
-	for (i = 1; info->argv[i]; i++)
-	{
-		p = _strchr(info->argv[i], '=');
-		if (p)
-			set_alias(info, info->argv[i]);
-		else
-			print_alias(node_starts_with(info->alias, info->argv[i], '='));
-	}
-
-	return (0);
-}
 /**
  * set_alias - sets alias to string
  * @info: parameter struct
@@ -56,17 +21,18 @@ int _myalias(info_t *info)
  */
 int set_alias(info_t *info, char *str)
 {
-        char *p;
+	char *p;
 
-        p = _strchr(str, '=');
-        if (!p)
-                return (1);
-        if (!*++p)
-                return (unset_alias(info, str));
+	p = _strchr(str, '=');
+	if (!p)
+		return (1);
+	if (!*++p)
+		return (unset_alias(info, str));
 
-        unset_alias(info, str);
-        return (add_node_end(&(info->alias), str, 0) == NULL);
+	unset_alias(info, str);
+	return (add_node_end(&(info->alias), str, 0) == NULL);
 }
+
 /**
  * unset_alias - sets aliass to string
  * @info: parameter structt.
@@ -110,3 +76,37 @@ return (0);
 }
 return (1);
 }
+/**
+ * _myalias - mimicss the alias builtin
+ * @info: Structure containing potentiall arguments. Used to maintain
+ *          constant function prototypee.
+ *  Return: Always 0
+ */
+int _myalias(info_t *info)
+{
+	int i = 0;
+	char *p = NULL;
+	list_t *node = NULL;
+
+	if (info->argc == 1)
+	{
+		node = info->alias;
+		while (node)
+		{
+			print_alias(node);
+			node = node->next;
+		}
+		return (0);
+	}
+	for (i = 1; info->argv[i]; i++)
+	{
+		p = _strchr(info->argv[i], '=');
+		if (p)
+			set_alias(info, info->argv[i]);
+		else
+			print_alias(node_starts_with(info->alias, info->argv[i], '='));
+	}
+
+	return (0);
+}
+
