@@ -4,14 +4,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <string.h>
+#include <sys/types.h>
+#include <sys/wait.h>
 #include <sys/stat.h>
 #include <limits.h>
 #include <fcntl.h>
 #include <errno.h>
-#include <string.h>
-#include <sys/types.h>
-#include <sys/wait.h>
-
 
 /* for read/write buffers */
 #define READ_BUF_SIZE 1024
@@ -59,14 +58,14 @@ typedef struct liststr
  * @path: a string path for the current command
  * @argc: the argument count
  * @line_count: the error count
- * @environ: custom modified copy of environ from LL env
- * @history: the history node
- * @alias: the alias node
- * @env_changed: on if environ was changed
  * @err_num: the error code for exit()s
  * @linecount_flag: if on count this line of input
  * @fname: the program filename
  * @env: linked list local copy of environ
+ * @environ: custom modified copy of environ from LL env
+ * @history: the history node
+ * @alias: the alias node
+ * @env_changed: on if environ was changed
  * @status: the return status of the last exec'd command
  * @cmd_buf: address of pointer to cmd_buf, on if chaining
  * @cmd_buf_type: CMD_type ||, &&, ;
@@ -79,16 +78,16 @@ typedef struct passinfo
 	char **argv;
 	char *path;
 	int argc;
+	unsigned int line_count;
+	int err_num;
+	int linecount_flag;
+	char *fname;
 	list_t *env;
 	list_t *history;
 	list_t *alias;
 	char **environ;
 	int env_changed;
 	int status;
-	unsigned int line_count;
-	int err_num;
-	int linecount_flag;
-	char *fname;
 
 	char **cmd_buf; /* pointer to cmd ; chain buffer, for memory mangement */
 	int cmd_buf_type; /* CMD_type ||, &&, ; */
@@ -110,6 +109,7 @@ typedef struct builtin
 	char *type;
 	int (*func)(info_t *);
 } builtin_table;
+
 
 
 /* toem_l00p_shell.c */
@@ -220,10 +220,9 @@ int _mysetenv(info_t *);
 int _myunsetenv(info_t *);
 
 /* toem_Exibutlin.c */
-int _myhelp(info_t *);
 int _myexit(info_t *);
 int _mycd(info_t *);
-
+int _myhelp(info_t *);
 
 /*toem_buferGet.c */
 ssize_t get_input(info_t *);
