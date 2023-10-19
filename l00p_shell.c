@@ -41,19 +41,7 @@ int hsh(info_t *info, char **av)
 	}
 	return (builtin_ret);
 }
-/**
- * _isalpha - checks for alphab character
- * @c: character to input
- * Return: 1 if c is alphabetic, 0 otherwise
- */
 
-int _isalpha(int c)
-{
-        if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-                return (1);
-        else
-                return (0);
-}
 /**
  * fork_cmd - forks   exec thread to run cmd
  * @info:  parameter && return info struct
