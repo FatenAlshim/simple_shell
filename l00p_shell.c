@@ -16,7 +16,7 @@ int hsh(info_t *info, char **av)
 		clear_info(info);
 		if (interactive(info))
 			_puts("$ ");
-		_putchar(BUF_FLUSH);
+		_eputchar(BUF_FLUSH);
 		r = get_input(info);
 		if (r != -1)
 		{
@@ -41,7 +41,6 @@ int hsh(info_t *info, char **av)
 	}
 	return (builtin_ret);
 }
-
 /**
  * _isalpha - checks for alphab character
  * @c: character to input
@@ -50,10 +49,10 @@ int hsh(info_t *info, char **av)
 
 int _isalpha(int c)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return (1);
-	else
-		return (0);
+        if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+                return (1);
+        else
+                return (0);
 }
 /**
  * fork_cmd - forks   exec thread to run cmd
