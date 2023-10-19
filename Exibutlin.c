@@ -17,8 +17,8 @@ if (exitcheck == -1)
 		{
 info->status = 2;
 print_error(info, "Illegal number: ");
-_eputs(info->argv[1]);
-_eputchar('\n');
+	_eputs(info->argv[1]);
+	_putchar('\n');
 return (1);
 		}
 info->err_num = _erratoi(info->argv[1]);
@@ -67,7 +67,7 @@ chdir_ret = chdir(info->argv[1]);
 if (chdir_ret == -1)
 {
 print_error(info, "can't cd to ");
-_eputs(info->argv[1]), _eputchar('\n');
+_eputs(info->argv[1]), _putchar('\n');
 }
 else
 {

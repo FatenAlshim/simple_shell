@@ -113,9 +113,9 @@ typedef struct builtin
 
 
 /* toem_l00p_shell.c */
+int hsh(info_t *, char **);
 int _isalpha(int);
 void fork_cmd(info_t *);
-int hsh(info_t *, char **);
 int find_builtin(info_t *);
 void find_cmd(info_t *);
 
