@@ -18,7 +18,7 @@ if (exitcheck == -1)
 info->status = 2;
 print_error(info, "Illegal number: ");
 	_eputs(info->argv[1]);
-	_putchar('\n');
+	_eputchar('\n');
 return (1);
 		}
 info->err_num = _erratoi(info->argv[1]);
@@ -55,10 +55,10 @@ else if (_strcmp(info->argv[1], "-") == 0)
 if (!_getenv(info, "OLDPWD="))
 {
 _puts(s);
-_putchar('\n');
+_eputchar('\n');
 return (1);
 }
-_puts(_getenv(info, "OLDPWD=")), _putchar('\n');
+_puts(_getenv(info, "OLDPWD=")), _eputchar('\n');
 chdir_ret = /* TODO: what should this be? */
 chdir((dir = _getenv(info, "OLDPWD=")) ? dir : "/");
 }
@@ -67,7 +67,7 @@ chdir_ret = chdir(info->argv[1]);
 if (chdir_ret == -1)
 {
 print_error(info, "can't cd to ");
-_eputs(info->argv[1]), _putchar('\n');
+_eputs(info->argv[1]), _eputchar('\n');
 }
 else
 {
