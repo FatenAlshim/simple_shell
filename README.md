@@ -157,9 +157,41 @@ Should print something on stderr on failure
 ===========================================================================================
 =========================================================================================
 ============================================================================================
+13. alias
+#advanced
+Score: 0.0% (Checks completed: 0.0%)
+Simple shell 1.0 +
+
+Implement the alias builtin command
+Usage: alias [name[='value'] ...]
+alias: Prints a list of all aliases, one per line, in the form name='value'
+alias name [name2 ...]: Prints the aliases name, name2, etc 1 per line, in the form name='value'
+alias name='value' [...]: Defines an alias for each name whose value is given. If name is already an alias, replaces its value with value
+Repo:
+
+GitHub repository: simple_shell
 ===========================================================================================
 =========================================================================================
 ============================================================================================
+14. Variables
+#advanced
+Score: 0.0% (Checks completed: 0.0%)
+Simple shell 1.0 +
+
+Handle variables replacement
+Handle the $? variable
+Handle the $$ variable
+julien@ubuntu:~/shell$ ./hsh
+$ ls /var
+backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  snap  spool  tmp
+$ echo $?
+0
+$ echo $$
+5104
+$ echo $PATH
+/home/julien/bin:/home/julien/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+$ exit 
+julien@ubuntu:~/shell$ 
 ===========================================================================================
 =========================================================================================
 ============================================================================================
