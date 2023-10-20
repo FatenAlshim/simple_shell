@@ -65,3 +65,10 @@ be able to move the cursor
 handle commands with arguments
 execve will be the core part of your Shell, don’t forget to pass the environ to it…
 ======================================================================================
+2. Simple shell 0.2
+mandatory
+Score: 0.0% (Checks completed: 0.0%)
+Simple shell 0.1 +
+
+Handle command lines with arguments
+========================================================================================
