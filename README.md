@@ -154,8 +154,48 @@ Command syntax: unsetenv VARIABLE
 Should print something on stderr on failure
 =========================================================================================
 ============================================================================================
-===========================================================================================
+10. cd
+#advanced
+Score: 0.0% (Checks completed: 0.0%)
+Simple shell 1.0 +
 
+Implement the builtin command cd:
+
+Changes the current directory of the process.
+Command syntax: cd [DIRECTORY]
+If no argument is given to cd the command must be interpreted like cd $HOME
+You have to handle the command cd -
+You have to update the environment variable PWD when you change directory
+man chdir, man getcwd
+
+Repo:
+
+GitHub repository: simple_shell
+===========================================================================================
+11. ;
+#advanced
+Score: 0.0% (Checks completed: 0.0%)
+Simple shell 1.0 +
+
+Handle the commands separator ;
+alex@~$ ls /var ; ls /var
+backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+alex@~$ ls /hbtn ; ls /var
+ls: cannot access /hbtn: No such file or directory
+backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+alex@~$ ls /var ; ls /hbtn
+backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+ls: cannot access /hbtn: No such file or directory
+alex@~$ ls /var ; ls /hbtn ; ls /var ; ls /var
+backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+ls: cannot access /hbtn: No such file or directory
+backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+alex@~$
+Repo:
+
+GitHub repository: simple_shell
 =========================================================================================
 12. && and ||
 #advanced
