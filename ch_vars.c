@@ -1,8 +1,8 @@
 #include "shell.h"
 /**
- * check_chain - checks we  continue chaining based on last status
- * @p: address of current position in buf
- * @i: starting position in buf
+ * check_chain - checkss  continue chaining based on last status
+ * @p: address of currentt position in buf
+ * @i: starting position iin buf
  * @info:  parameter struct
  * @buf: t  char buffer
  * @len: length of buf
