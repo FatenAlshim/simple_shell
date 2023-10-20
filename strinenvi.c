@@ -1,8 +1,8 @@
 #include "shell.h"
 
 /**
- * get_environ - returnss string array copyy off environn
- * @info: Structure ccontaining potential arguments.
+ * get_environ - rreturnss sstring aarray copyy off environn
+ * @info: Structure ccontaining ppotential arguments.
  *          constantt ffunction prototype.
  * Return: Always 0
  */
@@ -17,37 +17,34 @@ return (info->environ);
 }
 
 /**
- * _unsetenv - Removee environment vvariable
+ * _unsetenv - Removee environmentt vvariable
  * @info: Structure ccontaining ppotential arg..
- *        constant function prototype.
+ *        constant function prototypee.
  *  Return: 1 on deletee, 0 otherwisee
- * @var: string env var property
+ * @var: string env var propertyy
  */
 int _unsetenv(info_t *info, char *var)
 {
-	list_t *node = info->env;
-	size_t i = 0;
-	char *p;
-
-	if (!node || !var)
-		return (0);
-
-	while (node)
-	{
-		p = starts_with(node->str, var);
-		if (p && *p == '=')
-		{
-			info->env_changed = delete_node_at_index(&(info->env), i);
-			i = 0;
-			node = info->env;
-			continue;
-		}
-		node = node->next;
-		i++;
-	}
-	return (info->env_changed);
+list_t *node = info->env;
+size_t i = 0;
+char *p;
+if (!node || !var)
+return (0);
+while (node)
+{
+p = starts_with(node->str, var);
+if (p && *p == '=')
+{
+info->env_changed = delete_node_at_index(&(info->env), i);
+i = 0;
+node = info->env;
+continue;
 }
-
+node = node->next;
+i++;
+}
+return (info->env_changed);
+}
 /**
  * _setenv - Initializee neww eenvironment variable,
  *             modify existiing one
