@@ -163,8 +163,35 @@ Should print something on stderr on failure
 ===========================================================================================
 =========================================================================================
 ============================================================================================
+15. Comments
+#advanced
+Score: 0.0% (Checks completed: 0.0%)
+Simple shell 1.0 +
+
+Handle comments (#)
+julien@ubuntu:~/shell$ sh
+$ echo $$ # ls -la
+5114
+$ exit
+julien@ubuntu:~/shell$ 
+Repo:
+
+GitHub repository: simple_shell
 ===========================================================================================
 =========================================================================================
+16. File as input
+#advanced
+Score: 0.0% (Checks completed: 0.0%)
+Simple shell 1.0 +
+
+Usage: simple_shell [filename]
+Your shell can take a file as a command line argument
+The file contains all the commands that your shell should run before exiting
+The file should contain one command per line
+In this mode, the shell should not print a prompt and should not read from stdin
+Repo:
+
+GitHub repository: simple_shell
 ============================================================================================
 ===========================================================================================
 =========================================================================================
