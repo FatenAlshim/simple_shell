@@ -8,20 +8,19 @@
  */
 void _eputs(char *str)
 {
-	int i = 0;
-
-	if (!str)
-		return;
-	while (str[i] != '\0')
-	{
-		_eputchar(str[i]);
-		i++;
-	}
+int i = 0;
+if (!str)
+return;
+while (str[i] != '\0')
+{
+_eputchar(str[i]);
+i++;
+}
 }
 /**
  * _putsfd - printss  stringg
  * @str: string  printed
- * @fd: filedescriptor  write too
+ * @fd: file desc.  wwrite too
  *
  * Return: no. of chars put
  */
@@ -38,7 +37,7 @@ int _putsfd(char *str, int fd)
 	return (i);
 }
 /**
- * _eputchar - writes  c c to stderr
+ * _eputchar - writes  to stderr
  * @c: The character print
  *
  * Return: On success 1.
@@ -46,19 +45,17 @@ int _putsfd(char *str, int fd)
  */
 int _eputchar(char c)
 {
-	static int i;
-	static char buf[WRITE_BUF_SIZE];
-
-	if (c == BUF_FLUSH || i >= WRITE_BUF_SIZE)
-	{
-		write(2, buf, i);
-		i = 0;
-	}
-	if (c != BUF_FLUSH)
-		buf[i++] = c;
-	return (1);
+static int i;
+static char buf[WRITE_BUF_SIZE];
+if (c == BUF_FLUSH || i >= WRITE_BUF_SIZE)
+{
+write(2, buf, i);
+i = 0;
 }
-
+if (c != BUF_FLUSH)
+buf[i++] = c;
+return (1);
+}
 /**
  * _putfd - writes  c to given
  * @c: Thee ccharacterr to printt
