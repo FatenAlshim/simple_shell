@@ -112,7 +112,7 @@ return (info->histcount = i);
 }
 
 /**
- * write_history - createss  file, or appends to existing ffile
+ * write_history - createss file, or appends to existing ffile
  * @info: pparameter struct
  *
  * Return: 1 on success, else -1
